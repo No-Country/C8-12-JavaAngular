@@ -4,6 +4,7 @@ import java.util.List;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,8 +15,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.PutMapping;
 
-import no.country.clinica.model.Doctor;
-import no.country.clinica.repository.DoctorRepository;
+import no.country.clinica.domain.model.Doctor;
+import no.country.clinica.domain.service.DoctorService;
 
 @RestController
 @RequestMapping({"/doctors"})
@@ -23,15 +24,12 @@ public class DoctorController {
     
     private final Logger log = LoggerFactory.getLogger(DoctorController.class);
     
-    private DoctorRepository doctorRepository;
-    
-    public DoctorController(DoctorRepository doctorRepository) {
-        this.doctorRepository = doctorRepository;
-    }
+    @Autowired
+    private DoctorService doctorService;
     
     @GetMapping("")
-    public List<Doctor> doctors() {
-        return doctorRepository.findAll();
+    public List<Doctor> allDoctors() {
+        return doctorService.list();
     }
     
     @PostMapping("")
@@ -41,33 +39,34 @@ public class DoctorController {
             System.out.println("trying to create a doctor with id");
             return ResponseEntity.badRequest().build();
         }
-        Doctor result = doctorRepository.save(doctor);
-        return ResponseEntity.ok(result); // el libro devuelto tiene una clave primaria
+        doctorService.create(doctor);
+        return ResponseEntity.accepted().build();
     }
 
     @PutMapping("")
-    public ResponseEntity<Doctor> update(@RequestBody Doctor doctor){
+    public ResponseEntity<Doctor> update(Doctor doctor){
         if(doctor.getId() != null ){
             log.warn("Trying to update a non existent doctor");
             return ResponseEntity.badRequest().build();
         }
-        if(!doctorRepository.existsById(doctor.getId())){
+        doctor = doctorService.findDoctor(doctor); 
+        if(doctor==null){
             log.warn("Trying to update a non existent doctor");
             return ResponseEntity.notFound().build();
         }
-        Doctor result = doctorRepository.save(doctor);
-        return ResponseEntity.ok(result);
+        doctorService.create(doctor);
+        return ResponseEntity.accepted().build();
     }
     
     @DeleteMapping("/{id}")
-    public ResponseEntity<Doctor> delete(@PathVariable Long id){
-
-        if(!doctorRepository.existsById(id)){
-            log.warn("Trying to delete a non existent doctor");
+    public ResponseEntity<Doctor> delete(@PathVariable Long id, Doctor doctor){
+        doctor = doctorService.findDoctor(doctor); 
+        if(doctor==null){
+            log.warn("Trying to update a non existent doctor");
             return ResponseEntity.notFound().build();
         }
 
-        doctorRepository.deleteById(id);
+        doctorService.delete(doctor);
 
         return ResponseEntity.noContent().build();
     }
