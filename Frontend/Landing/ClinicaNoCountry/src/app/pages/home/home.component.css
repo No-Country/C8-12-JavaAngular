@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish&display=swap');
+
+body {
+    background-color: #F1F9EB;
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+}
+
+h2{
+    font-family: 'Mulish', sans-serif;
+    text-align: left;
+    color: #183BB5
+}
+
+.btn{
+    width: 150px;
+    background-color: #183BB5;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.btn:hover{
+    background-color: rgb(32, 97, 249);
+    color: #FFFFFF;
+}
+
+.sec-main{
+    background: url("./../../../assets/img/identidad-nocountry-1030x687.png") no-repeat right;
+    background-size: cover;
+    height: 67vh;
+}
+
+footer{
+    background-color: #707070;
+    color: white;
+    height: 21.7vh;
+}
+
+
+
+
+@media only screen and (min-width : 414px) and (max-width : 768px) {
+
+    .col-sm-2{
+        width: 20%;
+    }
+
+    .col-sm-5{
+        width: 80%;
+        margin: 0;
+    }
+
+    #nav{
+        margin-top: 1rem;
+        padding-right: 2rem;
+        font-size: 1.5em;
+        text-align: center;
+    }
+
+    #nav2{
+        margin-left: 1.8rem;
+    }
+    
+    .btn{
+        width: 35%;
+        font-size: small;
+        text-align: center;
+    }
+
+    h1{
+        margin-top: 4rem;
+
+    }
+
+    #subtitulo{
+        width: 95%;
+        font-size: medium;
+        text-align: center;
+    }
+
+    footer{
+        height: auto;
+        justify-content: center;
+        text-align: center;
+    }
+
+    #pie{
+        padding: 6rem;
+        font-size: small;
+    }
+
+}
+
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+
+    h1{
+        margin-top: 6rem;
+    }
+
+    #subtitulo{
+        width: 100%;
+        font-size: large;
+    }
+
+
+}
+
+@media only screen and (min-device-width: 993px) and (max-device-width: 1199.98px) {
+
+    h1{
+        margin-top: 5rem;
+    }
+
+    #subtitulo{
+        font-size: large;
+        width: 100%;
+    }
+}
+
+@media only screen and (min-device-width: 1200px){
+
+    h1{
+        width: 100%;
+        margin-top: 5rem;
+    }
+
+    #subtitulo{
+        font-size: large;
+        width: 100%;
+    }
+}
