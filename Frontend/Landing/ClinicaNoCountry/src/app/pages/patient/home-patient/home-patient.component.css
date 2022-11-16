@@ -1,0 +1,27 @@
+.patient-home {
+  width: 100vw;
+  height: 100vh;
+  padding: 2em;
+}
+
+.title {
+  font-weight: 400;
+}
+.contain-menu {
+  width: 100%;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-style {
+  position: relative;
+  background-color: rgba(24, 59, 181, 0.15);
+}
+
+.img-doctor {
+  position: absolute;
+  right: 25%;
+  z-index: 1;
+}
