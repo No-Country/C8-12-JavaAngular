@@ -17,27 +17,22 @@ public class DoctorServiceImp implements DoctorService {
     private DoctorDao doctorDao;
 
     @Override
-    @Transactional(readOnly = true)
     public List<Doctor> list() {
         return (List<Doctor>) doctorDao.findAll();
     }
 
     @Override
-    @Transactional
-    public void create(Doctor doctor) {
-        doctorDao.save(doctor);
+    public Doctor create(Doctor doctor) {
+        return (Doctor) doctorDao.save(doctor);
     }
 
     @Override
-    @Transactional
     public void delete(Doctor doctor) {
         doctorDao.delete(doctor);
     }
-
-    @Override
-    @Transactional(readOnly = true)
-    public Doctor findDoctor(Doctor doctor) {
-        return doctorDao.findById(doctor.getId()).orElse(null);
-    }
     
+    @Override
+    public Doctor findDoctorById(Long id) {
+        return doctorDao.findById(id).orElse(null);
+    }
 }

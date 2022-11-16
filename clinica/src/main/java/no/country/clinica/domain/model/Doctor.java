@@ -1,11 +1,10 @@
 package no.country.clinica.domain.model;
 
-import java.io.Serializable;
 import javax.persistence.*;
 
 @Entity
 @Table(name = "doctors")
-public class Doctor implements Serializable {
+public class Doctor {
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     private Long id;
@@ -13,21 +12,30 @@ public class Doctor implements Serializable {
     private String nameDoctor;
     @Column(name="lastname")
     private String lastname;
-    
-    private int idSpecialty;
-    
-    private Boolean deleted = Boolean.FALSE;
+    @Column(name="dni")
+    private String dni;
+    @Column(name="license")
+    private String license;
+    @Column(name="gender")
+    private String gender;
+    @Column(name="email")
+    private String email;
+    @OneToOne(cascade=CascadeType.ALL)
+    @PrimaryKeyJoinColumn
+    private Specialty specialty;
 
-    public Doctor(String nameDoctor, String lastname, int idSpecialty) {
+    public Doctor() {
+    }
+
+    public Doctor(String nameDoctor, String lastname, String dni, String license, String gender, String email) {
         this.nameDoctor = nameDoctor;
         this.lastname = lastname;
-        this.idSpecialty = idSpecialty;
+        this.dni = dni;
+        this.license = license;
+        this.gender = gender;
+        this.email = email;
     }
 
-    public Doctor(){
-        
-    }
-    
     public Long getId() {
         return id;
     }
@@ -52,20 +60,44 @@ public class Doctor implements Serializable {
         this.lastname = lastname;
     }
 
-    public int getIdSpecialty() {
-        return idSpecialty;
+    public String getDni() {
+        return dni;
     }
 
-    public void setIdSpecialty(int idSpecialty) {
-        this.idSpecialty = idSpecialty;
+    public void setDni(String dni) {
+        this.dni = dni;
     }
 
-    public Boolean getDeleted() {
-        return deleted;
+    public String getLicense() {
+        return license;
     }
 
-    public void setDeleted(Boolean deleted) {
-        this.deleted = deleted;
+    public void setLicense(String license) {
+        this.license = license;
+    }
+
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public Specialty getSpecialty() {
+        return specialty;
+    }
+
+    public void setSpecialty(Specialty specialty) {
+        this.specialty = specialty;
     }
     
     

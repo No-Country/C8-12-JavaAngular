@@ -7,9 +7,9 @@ import no.country.clinica.domain.model.Doctor;
 public interface DoctorService {
     public List<Doctor> list();
     
-    public void create(Doctor doctor);
+    public Doctor create(Doctor doctor);
     
     public void delete(Doctor doctor);
     
-    public Doctor findDoctor(Doctor doctor);
+    public Doctor findDoctorById(Long id);
 }
