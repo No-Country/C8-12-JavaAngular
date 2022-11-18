@@ -45,5 +45,7 @@ public class Specialty implements Serializable {
 
     @UpdateTimestamp
     private LocalDateTime updateDateTime;
-
+    
+    /**@OneToOne(mappedBy = "specialty")
+    private Doctor doctor;**/
 }

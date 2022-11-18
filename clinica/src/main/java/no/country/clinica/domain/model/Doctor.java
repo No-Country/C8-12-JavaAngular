@@ -20,21 +20,31 @@ public class Doctor {
     private String gender;
     @Column(name="email")
     private String email;
-    @OneToOne(cascade=CascadeType.ALL)
-    @PrimaryKeyJoinColumn
+    @Column(name="password")
+    private String password;
+    
+    /**@OneToOne(cascade = CascadeType.ALL)
+    private Specialty specialty;**/
+    
+    @OneToOne(cascade = CascadeType.ALL,fetch = FetchType.EAGER)
+    @JoinColumn(name = "specialty_id",referencedColumnName = "id")
     private Specialty specialty;
 
     public Doctor() {
     }
 
-    public Doctor(String nameDoctor, String lastname, String dni, String license, String gender, String email) {
+    public Doctor(String nameDoctor, String lastname, String dni, String license, String gender, String email, String password, Specialty specialty) {
         this.nameDoctor = nameDoctor;
         this.lastname = lastname;
         this.dni = dni;
         this.license = license;
         this.gender = gender;
         this.email = email;
+        this.password = password;
+        this.specialty = specialty;
     }
+    
+    
 
     public Long getId() {
         return id;
@@ -92,12 +102,35 @@ public class Doctor {
         this.email = email;
     }
 
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+  
     public Specialty getSpecialty() {
         return specialty;
     }
 
     public void setSpecialty(Specialty specialty) {
         this.specialty = specialty;
+    }
+
+    @Override
+    public String toString() {
+        return "Doctor{" + 
+                "id=" + id 
+                + ", nameDoctor=" + nameDoctor 
+                + ", lastname=" + lastname 
+                + ", dni=" + dni 
+                + ", license=" + license 
+                + ", gender=" + gender 
+                + ", email=" + email 
+                + ", password=" + password 
+                + ", specialty=" + specialty 
+                + '}';
     }
     
     

@@ -8,6 +8,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -33,6 +34,9 @@ public class DoctorController {
 
     @Autowired
     private DoctorService doctorService;
+    
+    @Autowired
+    private PasswordEncoder passwordEncoder;
 
     @GetMapping("")
     public List<Doctor> allDoctors() {
@@ -41,18 +45,36 @@ public class DoctorController {
 
     @PostMapping("")
     public ResponseEntity<Doctor> createDoctor(@RequestBody Doctor doctor) {
+        //Long numero = Long.valueOf((int)(Math.random()*10+1));
+        
+        Optional<Specialty> optionalSpecialty = specialtyRepository.findById(Long.valueOf(1));
+        Specialty specialty = optionalSpecialty.get();
+        
         if (doctor.getId() != null) {
             log.warn("trying to create a doctor with id");
             System.out.println("trying to create a doctor with id");
             return ResponseEntity.badRequest().build();
         }
+        
+        if (specialty == null) {
+            log.warn("Trying to look for a non existent specialty");
+            return ResponseEntity.notFound().build();
+        }
+        
+        doctor.setSpecialty(specialty);
+                
+        String encodedPassword = passwordEncoder.encode(doctor.getPassword());
+        doctor.setPassword(encodedPassword);
+        
         Doctor _doctor = doctorService.create(new Doctor(doctor.getNameDoctor(), 
-                doctor.getLastname(), doctor.getDni(),  doctor.getLicense(), 
-                doctor.getGender(), doctor.getEmail()));
+                doctor.getLastname(), doctor.getDni(), doctor.getLicense(), 
+                doctor.getGender(), doctor.getEmail(), doctor.getPassword(), 
+                doctor.getSpecialty()));
+        
         return new ResponseEntity<>(_doctor, HttpStatus.CREATED);
     }
 
-    @PostMapping("/{id}")
+    /**@PostMapping("/{id}")
     public ResponseEntity<Doctor> addSpecialty(@PathVariable(value = "id") Long id) {
         Doctor doctor = doctorService.findDoctorById(id);
         
@@ -67,7 +89,7 @@ public class DoctorController {
         doctorService.create(doctor);
 
         return new ResponseEntity<>(HttpStatus.CREATED);
-    }
+    }**/
 
     @PutMapping("/{doctorId}")
     public ResponseEntity<Doctor> update(@PathVariable(value = "doctorId") Long doctorId, @RequestBody Doctor newDoctor) {
