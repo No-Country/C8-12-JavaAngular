@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish&display=swap');
+
+.toolbar{
+    background-color: #183BB5;
+    gap: 1rem;
+}
+
+.icon{
+    color: white;
+}
+

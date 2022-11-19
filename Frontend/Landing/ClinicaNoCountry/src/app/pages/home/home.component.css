@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Mulish&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+2:wght@200;300;400;500;600;700;800;900&display=swap');
 
 body {
     background-color: #F1F9EB;
@@ -11,10 +12,20 @@ header{
     padding-bottom: 0.8rem;
 }
 
-h2{
+h1{
+    font-family: 'M PLUS 2', sans-serif;
+    font-size: 3.5em;
+}
+
+p{
+    font-family: 'Mulish', sans-serif;
+    font-size: 1.5em;
+}
+
+h2 {
     font-family: 'Mulish', sans-serif;
     text-align: left;
-    color: #183BB5
+    color: #183BB5;
 }
 
 .btn{
@@ -130,7 +141,6 @@ footer{
     }
 
     #subtitulo{
-        font-size: large;
         width: 100%;
     }
 }

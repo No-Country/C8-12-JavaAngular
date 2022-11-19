@@ -43,7 +43,6 @@ import { MatListModule } from '@angular/material/list';
     ReactiveFormsModule, FormsModule,
     MatSidenavModule,
     NavComponent
-
   ]
 })
 export class MaterialModule { }

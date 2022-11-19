@@ -1,0 +1,24 @@
+.sidenav {
+    position: absolute;
+    top: 25;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(24, 59, 181, 0.3);
+    right: 0;
+}
+
+.sidenav-events {
+    width: 300px;
+    height: 200px;
+    overflow: auto;
+    border: 1px solid #555;
+}
+
+mat-sidenav-container{
+    height: calc(205vh - 115vh);
+}
+
+mat-sidenav {
+    width: 250px;
+    font-family: 'Mulish', sans-serif;
+}
