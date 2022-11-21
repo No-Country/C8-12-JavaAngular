@@ -6,6 +6,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import no.country.clinica.domain.model.Address;
 
 @Setter
 @Getter
@@ -23,4 +24,6 @@ public class PatientDTO {
 
     @NotNull
     private Integer dni;
+
+    private AddressDTO address;
 }

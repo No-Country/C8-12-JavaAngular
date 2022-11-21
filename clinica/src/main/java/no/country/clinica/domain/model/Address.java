@@ -37,5 +37,7 @@ public class Address implements Serializable {
 
     private String province;
 
+    private Boolean deleted = Boolean.FALSE;
+
 
 }

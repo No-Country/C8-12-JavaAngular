@@ -2,13 +2,14 @@ package no.country.clinica.controller;
 
 import no.country.clinica.domain.model.Patient;
 import no.country.clinica.domain.service.impl.PatientServiceImpl;
+import no.country.clinica.domain.util.Url;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/patients")
+@RequestMapping(Url.PATIENTS_URI)
 public class PatientController {
 
     @Autowired

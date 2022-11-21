@@ -8,13 +8,15 @@ import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.SQLDelete;
 import org.hibernate.annotations.UpdateTimestamp;
 import org.hibernate.annotations.Where;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
 import java.io.Serializable;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.util.Date;
 
-    @Entity
+@Entity
     @Getter
     @Setter
     @SQLDelete(sql = "UPDATE appointments SET deleted = true WHERE id = ?")
@@ -24,13 +26,23 @@ import java.time.LocalDateTime;
 public class Appointment implements Serializable {
 
     private static final long serialVersionUID = 1L;
+
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue
     private Long id;
 
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
+    private LocalDateTime dateTimeAppointment;
 
+    @ManyToOne
+    @JoinColumn(name = "doctor_id", nullable = false)
+    private Doctor doctor;
 
-    private LocalDate date;
+    @ManyToOne
+    @JoinColumn(name = "patient_id", nullable = false)
+    private Patient patient;
+
+    private boolean deleted = Boolean.FALSE;
 
     @CreationTimestamp
     @Column(updatable = false)

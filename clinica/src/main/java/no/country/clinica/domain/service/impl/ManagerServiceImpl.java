@@ -5,11 +5,13 @@ import no.country.clinica.domain.model.Patient;
 import no.country.clinica.domain.repository.ManagerRepository;
 import no.country.clinica.domain.service.IManagerService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
 import java.util.List;
 import java.util.Optional;
 
+@Service
 public class ManagerServiceImpl implements IManagerService {
 
     @Autowired
