@@ -1,0 +1,46 @@
+
+
+.col-sm-8{
+  padding: 30px 10px;
+  width: 100%;
+  max-width: 50%;
+
+  background: rgba(24, 59, 181, 0.15);
+  border-radius: 15px;
+
+}
+.row{
+  justify-content: center;
+}
+
+.controls{
+  position: relative;
+  background:white;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  border: 1px solid #1f53c5;
+  font-size: 18px;
+  max-width: 50%;
+
+}
+  .botons{
+    position: relative;
+  border: 0;
+  color: white;
+  background: rgba(24, 59, 181, 0.75);
+  border-radius: 4px;
+  width: 25%;
+  padding: 1.5%;
+
+}
+.control-label{
+  position: relative;
+  left: 20%;
+
+}
+
+.form-group.required .control-label:after {
+  content:"*";
+  color:red;
+}
