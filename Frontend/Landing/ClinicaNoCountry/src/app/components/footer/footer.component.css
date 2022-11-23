@@ -1,49 +1,109 @@
 @import url('https://fonts.googleapis.com/css?family=Inter');
 
-
 .footer {
-    background-color: #707070; 
+    background-color: #707070;
+    display: flex;
     width: 100%;
+    height: 8em;
+    position: absolute;
+    margin-top: 940px;
+    margin-bottom: auto;
+
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 700px;
+
+}
+
+.item-1 {
+    font-family: 'inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    display: flex;
     height: 130px;
-    margin-top: 945px;
-    
+    justify-content: center;
+    align-items: right;
+    color: #ffffff;
+    margin-right: 5%;
+    margin-top: 2%;
+
 }
 
-@media all and (max-width: 1200px) {
-    .footer {
-        width: 100%;
-        height: 75px;
-        margin-top: 475px;
-    }
-}
-
-.ayuda {
-    display: flex;
-    
-    font-family: 'Inter';
+.item-2 {
+    font-family: 'inter';
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
     line-height: 24px;
-    color: #8b1616;
-    padding: 25px;
-    left: 10%;
-    top: 200%;
-    text-align: center;
-    
+    display: flex;
+    height: 130px;
+    justify-content: center;
+    align-items: right;
+    color: #ffffff;
+    margin-right: 5%;
+    margin-top: 2%;
 }
 
-.novedades {
-    display: flex;
-    
-    font-family: 'Inter';
+.item-3 {
+    font-family: 'inter';
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
     line-height: 24px;
-    color: #8b1616;
-    padding: 25px;
-    left: 50%;
-    top: 200%;
-    text-align: center;
-    }
+    display: flex;
+    height: 130px;
+    justify-content: center;
+    align-items: right;
+    color: #ffffff;
+    margin-right: 5%;
+    margin-top: 2%;
+
+}
+
+.item-4 {
+    font-family: 'inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    display: flex;
+    height: 130px;
+    justify-content: center;
+    align-items: right;
+    color: #ffffff;
+    margin-right: 5%;
+    margin-top: 2%;
+}
+
+.item-4 {
+    font-family: 'inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    display: flex;
+    height: 130px;
+    color: #ffffff;
+    margin-top: -9%;
+    margin-right: 5%;
+
+}
+
+.container-2 {
+    display: flex;
+    width: 600px;
+    height: 8em;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+
+img {
+    height: 42px;
+}
