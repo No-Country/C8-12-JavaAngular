@@ -13,6 +13,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './modules/material/material.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
+import { Pag404Component } from './pages/pag404/pag404.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     LoginComponent,
     RegisterComponent,
     HomePatientComponent,
-    SidenavComponent
+    SidenavComponent,
+    Pag404Component
   ],
   imports: [
     BrowserModule,
