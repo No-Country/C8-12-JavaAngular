@@ -1,17 +1,26 @@
-<mat-sidenav-container class="sidenav" *ngIf="shouldRun">
-    <mat-sidenav #sidenav mode="side" [(opened)]="opened" (opened)="events.push('open!')"
-        (closed)="events.push('close!')">
-    Sidenav content
-    </mat-sidenav>
 
-    <mat-sidenav-content>
-        <p><mat-checkbox [(ngModel)]="opened">sidenav.opened</mat-checkbox></p>
-        <p><button mat-button (click)="sidenav.toggle()">sidenav.toggle()</button></p>
-        <p>Events:</p>
-        <div class="sidenav-events">
-            <div *ngFor="let e of events">{{e}}</div>
-        </div>
-    </mat-sidenav-content>
-</mat-sidenav-container>
+<section class="container">
+    <div class="list__img">
+        <img src="../../../assets/img/avatar.svg" alt="avatar" width="auto">
+    </div>
+    <ul class="list fs-5">
+        <li class="list__item">
+            <a routerLink="/home-patient" class="nav__link">Inicio</a>
+        </li>
+        <li class="list__item">
+            <a routerLink="/" class="nav__link">Generar Turno</a>
+        </li>
+        <li class="list__item">
+            <a routerLink="/"  class="nav__link">Mis Turnos</a>
+        </li>
+        <li class="list__item">
+            <a routerLink="/"  class="nav__link">Mi Información</a>
+        </li>               
+    </ul>
+    <div class="list__button fs-5">
+        <a routerLink="/" class="button__link">Cerrar Sesión</a>
+        <img src="../../../assets/img/button.svg" alt="button">
+    </div>
+</section>
 
-<div *ngIf="!shouldRun">Please open on Stackblitz to see result</div>
+
