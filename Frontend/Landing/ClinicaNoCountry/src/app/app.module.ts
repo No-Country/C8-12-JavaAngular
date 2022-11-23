@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { FooterComponent } from './components/footer/footer.component';
@@ -12,6 +12,7 @@ import { HomePatientComponent } from './pages/patient/home-patient/home-patient.
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './modules/material/material.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { HttpClientJsonpModule } from '@angular/common/http';
 
 import { Pag404Component } from './pages/pag404/pag404.component';
 
@@ -32,7 +33,8 @@ import { Pag404Component } from './pages/pag404/pag404.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
-    NgbModule
+    NgbModule,
+    HttpClientJsonpModule
   ],
   providers: [],
   bootstrap: [
@@ -44,6 +46,9 @@ import { Pag404Component } from './pages/pag404/pag404.component';
     RegisterComponent,
     HomePatientComponent,
     SidenavComponent
+  ],
+  schemas: [
+    CUSTOM_ELEMENTS_SCHEMA
   ]
 })
 export class AppModule { }

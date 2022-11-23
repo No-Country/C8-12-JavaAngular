@@ -10,14 +10,13 @@ import {MatCommonModule} from '@angular/material/core';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import {ReactiveFormsModule, FormsModule} from '@angular/forms';
 import {MatSidenavModule} from '@angular/material/sidenav';
-import { NavComponent } from './components/nav/nav.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatListModule } from '@angular/material/list';
 
 
 
 @NgModule({
-  declarations: [NavComponent],
+  declarations: [],
   imports: [
     CommonModule,
     MatToolbarModule,
@@ -41,8 +40,7 @@ import { MatListModule } from '@angular/material/list';
     MatCommonModule,
     MatButtonToggleModule,
     ReactiveFormsModule, FormsModule,
-    MatSidenavModule,
-    NavComponent
+    MatSidenavModule
   ]
 })
 export class MaterialModule { }
