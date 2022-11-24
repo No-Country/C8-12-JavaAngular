@@ -7,7 +7,6 @@ import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 import javax.persistence.*;
-import java.io.Serial;
 import java.io.Serializable;
 
 @Entity
@@ -18,7 +17,6 @@ import java.io.Serializable;
 @ToString
 public class Manager implements Serializable {
 
-    @Serial
     private static final long serialVersionUID = 1L;
 
     @Id

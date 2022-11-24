@@ -10,7 +10,6 @@ import org.hibernate.annotations.SQLDelete;
 import org.hibernate.annotations.Where;
 
 import javax.persistence.*;
-import java.io.Serial;
 import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Set;
@@ -25,7 +24,6 @@ import java.util.Set;
 @Where(clause = "deleted = false")
 public class Patient implements Serializable {
 
-    @Serial
     private static final long serialVersionUID = 1L;
 
     @Id
