@@ -15,6 +15,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HttpClientJsonpModule } from '@angular/common/http';
 
 import { Pag404Component } from './pages/pag404/pag404.component';
+import { GenerateTurnComponent } from './pages/patient/generate-turn/generate-turn.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { Pag404Component } from './pages/pag404/pag404.component';
     RegisterComponent,
     HomePatientComponent,
     SidenavComponent,
-    Pag404Component
+    Pag404Component,
+    GenerateTurnComponent
   ],
   imports: [
     BrowserModule,
