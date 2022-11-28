@@ -9,13 +9,13 @@ import { FormsModule } from '@angular/forms';
 })
 export class LoginComponent  {
  
-  number?: number;
-  password?: string;
+  email: string;
+  password: string;
 
   constructor() { }
 
   login() {
-    console.log(this.number);
+    console.log(this.email);
     console.log(this.password);
   }
   
