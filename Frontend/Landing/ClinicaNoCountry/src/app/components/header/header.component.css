@@ -1,0 +1,12 @@
+.toolbar{
+    background-color: #183BB5;
+    gap: 1rem;
+}
+
+.icon{
+    color: white;
+}
+
+.logo{
+    padding: 0.5rem;
+}

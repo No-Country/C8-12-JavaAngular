@@ -1,18 +1,12 @@
-<header id="home">
-    <div class="container"  >
-        <div class="row">
-            <div class="col-md-2 col-sm-2">
-                <a href="#home" data-ancla="home">
-                <img src="../assets/img/logo.png" alt="logo" width="80px"></a>
-            </div>
-            <div class="col-md-3 col-sm-5 pt-4">
-                <h2 class="lead" id="nav">Clínica No Country</h2>
-            </div>
-            <div class="col-md-7 col-sm-5 pt-4 text-end" id="nav2">
-                <a class="btn mx-3">Iniciar Sesion</a>
-                <a class="btn mx-3">Registrarse</a>
-            </div>
-        </div>
+<mat-toolbar class="toolbar">
+    <button mat-icon-button class="icon" aria-label="icon-button with menu icon" (click)="inputSideNav.toggle()
+    ">
+        <mat-icon class="fs-1">menu</mat-icon>
+    </button>
+    <div class="logo">
+        <a href="#home" data-ancla="home">
+        <img src="../../../assets/img/logo-nav.svg" alt="logo"></a>
     </div>
-</header>
+
+</mat-toolbar>
 
