@@ -1,8 +1,7 @@
-<<<<<<< Updated upstream
 .container {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
-=======
+
 * {
     box-sizing: border-box;
   }
@@ -54,4 +53,3 @@
     box-shadow: 3px 3px 8px #b1b1b1, -3px -3px 8px #ffffff;
     cursor: pointer;
   }
->>>>>>> Stashed changes
