@@ -7,7 +7,7 @@ import { LogoComponent } from '.c:/Users/gadri/OneDrive/Documentos/GitHub/C8-12-
 import { FormComponent } from './components/form/form.component';
 
 @NgModule({
-  declarations: [	
+  declarations: [
     AppComponent,
       LogoComponent,
       FormComponent
