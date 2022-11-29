@@ -1,1 +1,39 @@
-<p>register works!</p>
+<app-header></app-header>
+
+
+<h1 class="text-center">Registrarse</h1>
+<p class="text-center">ingresa los datos para completar el registro</p>
+<div class="container px-5">
+
+</div>
+
+<div class="row d-flex">
+
+  <div class="col-sm-8 ">
+    <form class="row g-2 form-group required ">
+      <label for="nombres " class=" control-label " >Nombre</label><br/>
+      <input class="controls" type="text" name="nombres" id="nombres" placeholder="Ingrese su Nombre"><br/>
+      <label for="nombres " class=" control-label  ">Apellido</label><br/>
+      <input class="controls" type="text" name="apellidos" id="apellidos" placeholder="Ingrese su Apellido"><br/>
+      <label for="nombres" class=" control-label  ">Documento de identidad</label><br/>
+     <input class="controls" type="text" name="DNI" id="DNI"
+      placeholder="Ingrese su Documento de identidad"><br/>
+      <label for="nombres" class=" control-label ">E-mail</label><br/>
+      <input class="controls" type="" name="Email" id="Email" placeholder="Ingrese su E-mail"><br/>
+      <label for="nombres" class=" control-label ">Contraseña</label><br/>
+      <input class="controls" type="password" name="password" id="password"
+        placeholder="Ingrese su contraseña "><br/>
+        <p class="text-center">Minimo 8 caracteres, una letra mayuscula y un signo(/*-&)</p>
+        <label for="nombres" class=" control-label">Repita la contraseña</label><br/>
+        <input class="controls" type="password" name="password" id="second-password"
+        placeholder="Repita su contraseña"><br/>
+        <div style="text-align: right">
+        <button class="button botons" type="submit" value="Registrarme"  >Registrarme</button>
+      </div>
+      </form>
+
+      <p class="cuenta text-center">Ya tienes cuenta? <a href="login">Iniciar sesión</a></p>
+      </div>
+<div class="footer">
+   <app-footer></app-footer> 
+</div>

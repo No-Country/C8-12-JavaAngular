@@ -99,4 +99,9 @@ select {
     box-shadow: 3px 3px 8px #b1b1b1, -3px -3px 8px #ffffff;
     cursor: pointer;
   }
-  
+  .registrar {
+    font-size: 1.2rem;
+    margin-left: 55%;
+    margin-bottom: 1%;
+    margin-top: 1.5rem;
+  }
