@@ -7,6 +7,7 @@ import no.country.clinica.enums.RolName;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.HttpMethod;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -48,6 +49,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
         httpSecurity.csrf().disable()
                 .authorizeRequests().antMatchers("/auth/login", "/auth/register","/v2/api-docs", "/swagger-resources/**", "/swagger-ui/**", "/swagger-ui/index.html**", "/webjars/**", "/actuator/health").permitAll()
                 .antMatchers("/auth/users", "/auth/users/*", "/api/assets/upload").hasAnyAuthority(RolName.ROLE_ADMIN.toString())
+                .antMatchers(HttpMethod.GET, "addresses").hasAnyAuthority(RolName.ROLE_USER.toString())
                 .anyRequest().authenticated()
                 .and().exceptionHandling()
                 .and().sessionManagement()
