@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/managers")
+@CrossOrigin
 public class ManagerController {
 
     @Autowired

@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping(Url.PATIENTS_URI)
+@CrossOrigin
 public class PatientController {
 
     @Autowired

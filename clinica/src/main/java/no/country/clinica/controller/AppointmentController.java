@@ -17,6 +17,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping(Url.APPOINTMENTS_URI)
+@CrossOrigin
 public class AppointmentController {
 
     @Autowired
