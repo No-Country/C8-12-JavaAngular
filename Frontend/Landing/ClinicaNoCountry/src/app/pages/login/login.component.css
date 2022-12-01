@@ -3,7 +3,7 @@
 * {
     box-sizing: border-box;
   }
- h1 {
+h1 {
   font-size: 74px;
     margin-top: 10%;
     margin-bottom: 1%;
@@ -13,6 +13,16 @@
   * {
     font-family: mulish;
   }
+
+.toolbar{
+    background-color: #183BB5;
+    gap: 1rem;
+}
+
+.logo{
+    padding: 0.5rem;
+}
+
   .complete {
     font-size: 30px;
     margin-bottom: 3rem;
