@@ -43,9 +43,9 @@ select {
     background: #153abe;
     padding: 3rem 3rem;
     margin: auto;
-    border-radius: 2.5rem;
+    border-radius: 16px;
     background-color: #D2D7E9;
-    box-shadow: 13px 13px 20px #cbced1, -13px -13px 20px #ffffff;
+    /* box-shadow: 13px 13px 20px #cbced1, -13px -13px 20px #ffffff; */
     color: black;
     margin-top: 0.1rem;
     margin-bottom: 5rem;
@@ -70,21 +70,21 @@ select {
   .custom-form input {
     display: block;
     margin:  0.3rem;
-    margin-top: 0.3rem;
+    margin-top: 0.8rem;
     margin-bottom: 0.3rem;
     width: 100%;
     border-radius: 0.5rem;
     padding: 1rem;
     border: none;
-    box-shadow: inset -5px -5px 15px rgba(255, 255, 255, 0.8), inset 5px 5px 10px
-        rgba(0, 0, 0, 0.1);
+    /* box-shadow: inset -5px -5px 15px rgba(255, 255, 255, 0.8), inset 5px 5px 10px
+        rgba(0, 0, 0, 0.1); */
     border: 0 none;
     background: #ffffff;
-    margin-left: 2rem;
+    margin-left: 0.5rem;
   }
   .custom-form button {
     
-    letter-spacing: 0.6em;
+    letter-spacing: 0.2em;
     border: none;
     font-size: 1.5rem;
     color: #ffffff;
@@ -96,7 +96,7 @@ select {
     margin-left: 15%;
     padding: 0.875rem 1rem;
     border-radius: .5rem;
-    box-shadow: 3px 3px 8px #b1b1b1, -3px -3px 8px #ffffff;
+    /* box-shadow: 3px 3px 8px #b1b1b1, -3px -3px 8px #ffffff; */
     cursor: pointer;
   }
   

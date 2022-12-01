@@ -19,12 +19,22 @@ p{
     font-family: 'Mulish', sans-serif;
     font-size: 1.5em;
 }
+.logo {
+    padding-left: 0rem;
+    padding-right: 0rem;
+    margin-left: 1rem;
+    margin-right: 0rem;
+}
 
 h2 {
     font-family: 'Mulish', sans-serif;
-    text-align: left;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-right: 5rem;
+    margin-top: 0.5rem;
     color: #183BB5;
 }
+
 
 .btn{
     width: 150px;
@@ -81,13 +91,13 @@ footer{
 
     #nav{
         margin-top: 1rem;
-        padding-right: 2rem;
+        padding-right: 0.5rem;
         font-size: 1.5em;
-        text-align: center;
+        text-align: right;
     }
 
     #nav2{
-        margin-left: 1.8rem;
+        margin-left: 1rem;
     }
     
     .btn{
@@ -157,3 +167,4 @@ footer{
         width: 100%;
     }
 }
+
