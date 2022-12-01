@@ -1,7 +1,21 @@
+.generate-turn {
+    width: 100%;
+    padding-top: 5.5rem;
+    padding-bottom: 5rem;
+}
+
+.title {
+    font-family: 'Mulish', sans-serif;
+}
+
 .container-inputs {
     display: flex;
-    padding: 2em;
-    width: 100%;
-    align-items: center;
+    width: 80%;
+    height: 28vh;
+    align-items: flex-start;
     justify-content: space-around;
+}
+
+.form-select{
+    width: 300px;
 }
