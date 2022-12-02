@@ -10,8 +10,9 @@ import {MatCommonModule} from '@angular/material/core';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import {ReactiveFormsModule, FormsModule} from '@angular/forms';
 import {MatSidenavModule} from '@angular/material/sidenav';
-import { LayoutModule } from '@angular/cdk/layout';
-import { MatListModule } from '@angular/material/list';
+import {LayoutModule} from '@angular/cdk/layout';
+import {MatListModule} from '@angular/material/list';
+import {MatTableModule} from '@angular/material/table';
 
 
 
@@ -29,7 +30,8 @@ import { MatListModule } from '@angular/material/list';
     ReactiveFormsModule, FormsModule,
     MatSidenavModule,
     LayoutModule,
-    MatListModule
+    MatListModule,
+    MatTableModule
   ], 
   exports: [
     MatToolbarModule,
