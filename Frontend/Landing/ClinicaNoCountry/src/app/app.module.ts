@@ -16,6 +16,8 @@ import { HttpClientJsonpModule } from '@angular/common/http';
 
 import { Pag404Component } from './pages/pag404/pag404.component';
 import { GenerateTurnComponent } from './pages/patient/generate-turn/generate-turn.component';
+import { ApptPatientComponent } from './pages/patient/appt-patient/appt-patient.component';
+import { MatTableModule } from '@angular/material/table';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,8 @@ import { GenerateTurnComponent } from './pages/patient/generate-turn/generate-tu
     HomePatientComponent,
     SidenavComponent,
     Pag404Component,
-    GenerateTurnComponent
+    GenerateTurnComponent,
+    ApptPatientComponent
   ],
   imports: [
     BrowserModule,
@@ -36,7 +39,8 @@ import { GenerateTurnComponent } from './pages/patient/generate-turn/generate-tu
     BrowserAnimationsModule,
     MaterialModule,
     NgbModule,
-    HttpClientJsonpModule
+    HttpClientJsonpModule,
+    MatTableModule
   ],
   providers: [],
   bootstrap: [
