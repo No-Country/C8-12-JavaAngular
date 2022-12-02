@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css?family=Mulish');
+
+* {
+font-family: Mulish;
+}
+h1 {
+    margin-top: 3%;
+    margin-left: 10%;
+}
+form {
+    display:flex;
+    flex-direction: row ;
+    border:1px solid grey;
+    border-radius: 0.5rem;
+    padding:5px;
+    margin-bottom: 1rem;
+  }
+  
+input {
+    flex-grow:1.5;
+    border:none;
+    }
+  
+input:focus {
+    outline: none;
+  }
+  
+.lupa {
+    
+    border: 0;
+}
+img {
+    width: 1.5rem;
+    height: 1.5rem;
+}
