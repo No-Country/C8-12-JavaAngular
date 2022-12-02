@@ -1,5 +1,5 @@
 # C8-12-JavaAngular - Clinica No Country
-## Introduccón
+## Introducción
 Clinica No country es un proyecto que nace de un equipo de No Country y permitirá a tres tipos de usuarios distintas acciones, entre ellas: registrarse, iniciar sesión y visualizar los turnos creados y modificar esos turnos. Los 3 Usuarios que podemos encontrar son:
 1) Paciente: puede generar turnos nuevos.
 2) Médico: puede visualizar los turnos próximos.
