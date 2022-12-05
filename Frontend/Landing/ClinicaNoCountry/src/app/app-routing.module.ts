@@ -7,6 +7,7 @@ import { RegisterComponent } from './pages/register/register.component';
 import { HomePatientComponent } from './pages/patient/home-patient/home-patient.component';
 import { GenerateTurnComponent } from './pages/patient/generate-turn/generate-turn.component';
 import { HomeAdminComponent } from './pages/home-admin/home-admin.component';
+import { HomeMedicComponent } from './pages/home-medic/home-medic.component';
 
 const routes: Routes = [
   {path: '', redirectTo: 'home', pathMatch: 'full'},
@@ -16,7 +17,9 @@ const routes: Routes = [
   {path: 'home-patient', component: HomePatientComponent },
   {path: 'generate-turn', component: GenerateTurnComponent},
   {path: 'home-admin', component: HomeAdminComponent },
+  {path: 'home-medic', component: HomeMedicComponent},
   {path: '**', component: Pag404Component},
+  
 ];
 
 @NgModule({

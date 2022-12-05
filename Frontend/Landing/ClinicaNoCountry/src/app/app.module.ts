@@ -17,6 +17,7 @@ import { HttpClientJsonpModule } from '@angular/common/http';
 import { Pag404Component } from './pages/pag404/pag404.component';
 import { GenerateTurnComponent } from './pages/patient/generate-turn/generate-turn.component';
 import { HomeAdminComponent } from './pages/home-admin/home-admin.component';
+import { HomeMedicComponent } from './pages/home-medic/home-medic.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { HomeAdminComponent } from './pages/home-admin/home-admin.component';
     SidenavComponent,
     Pag404Component,
     GenerateTurnComponent,
-    HomeAdminComponent
+    HomeAdminComponent,
+    HomeMedicComponent
   ],
   imports: [
     BrowserModule,
