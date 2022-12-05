@@ -6,6 +6,50 @@
     <button class="lupa"><img src="assets/img/lupa.png" alt=""></button>
 </form>
 
+<div class='row'>
+    <div class="col align-self-center">
+        <div class='contain-menu'>
+            <table mat-table [datasource]="datasource" class="mat-elevation-z8 ">
+
+                <!--- Note that these columns can be defined in any order.
+                    The actual rendered columns are set as a property on the row definition" -->
+            
+                <!-- Column -->
+                <ng-container matColumnDef="fecha">
+                  <th mat-header-cell *matHeaderCellDef class="fs-4"> Fecha </th>
+                  <td mat-cell *matCellDef="let element" class="fs-4 text-start"> {{element.fecha}} </td>
+                </ng-container>
+            
+                <!-- Column -->
+                <ng-container matColumnDef="hora">
+                  <th mat-header-cell *matHeaderCellDef class="fs-4"> Hora </th>
+                  <td mat-cell *matCellDef="let element" class="fs-4 text-start"> {{element.hora}} </td>
+                </ng-container>
+            
+                <!-- Column -->
+                <ng-container matColumnDef="direccion">
+                  <th mat-header-cell *matHeaderCellDef class="fs-4" > Dirección </th>
+                  <td mat-cell *matCellDef="let element" class="fs-4 text-start" > {{element.direccion}} </td>
+                </ng-container>
+            
+                <!-- Column -->
+                <ng-container matColumnDef="especialidad">
+                  <th mat-header-cell *matHeaderCellDef class="fs-4" > Especialidad </th>
+                  <td mat-cell *matCellDef="let element" class="fs-4 text-start" > {{element.especialidad}} </td>
+                </ng-container>
+            
+                <!-- Column -->
+                <ng-container matColumnDef="profesional">
+                    <th mat-header-cell *matHeaderCellDef class="fs-4"> Profesional </th>
+                    <td mat-cell *matCellDef="let element" class="fs-4 text-start" > {{element.profesional}} </td>
+                </ng-container>
+
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+            </table>
+        </div>
+    </div>
+</div>
 
 
 
