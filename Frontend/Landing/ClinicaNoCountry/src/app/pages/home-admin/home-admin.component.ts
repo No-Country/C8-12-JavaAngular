@@ -27,7 +27,7 @@ const ELEMENT_DATA: turnosPaciente[] = [
 export class HomeAdminComponent  implements OnInit {
 
   displayedColumns: string[] = ['fecha', 'hora', 'direccion', 'especialidad', 'profesional'];
-  datasource = ELEMENT_DATA;
+  dataSource = ELEMENT_DATA;
 
 
   constructor() { }

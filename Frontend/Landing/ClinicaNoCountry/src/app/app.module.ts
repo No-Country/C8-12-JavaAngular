@@ -13,7 +13,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './modules/material/material.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HttpClientJsonpModule } from '@angular/common/http';
-
+import { MatTableModule } from '@angular/material/table';
 import { Pag404Component } from './pages/pag404/pag404.component';
 import { GenerateTurnComponent } from './pages/patient/generate-turn/generate-turn.component';
 import { HomeAdminComponent } from './pages/home-admin/home-admin.component';
@@ -32,7 +32,8 @@ import { HomeMedicComponent } from './pages/home-medic/home-medic.component';
     Pag404Component,
     GenerateTurnComponent,
     HomeAdminComponent,
-    HomeMedicComponent
+    HomeMedicComponent,
+  
   ],
   imports: [
     BrowserModule,
