@@ -41,7 +41,8 @@ import { HomeMedicComponent } from './pages/home-medic/home-medic.component';
     BrowserAnimationsModule,
     MaterialModule,
     NgbModule,
-    HttpClientJsonpModule
+    HttpClientJsonpModule,
+    MatTableModule
   ],
   providers: [],
   bootstrap: [
