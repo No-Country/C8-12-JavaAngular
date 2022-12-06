@@ -10,7 +10,7 @@ h1 {
 form {
     display:flex;
     flex-direction: row ;
-    border:1px solid grey;
+    border:1px solid rgb(42, 41, 41);
     border-radius: 0.5rem;
     padding:5px;
     margin-bottom: 1rem;
@@ -28,6 +28,7 @@ input:focus {
 .lupa {
     
     border: 0;
+    background-color: white;
 }
 img {
     width: 1.5rem;
@@ -53,6 +54,8 @@ img {
 }
 
 .contain-menu {
+    margin-top: 3rem;
+    margin-bottom: 5rem;
     width: 100%;
     height: 55vh;
     display: flex;
@@ -65,15 +68,4 @@ table{
     width: 100%;
     background-color: #D2D7E9;
 
-}
-
-.btn-primary {
-    width: 20em;
-    background: #183BB5;
-    border-radius: 0.5em;
-    border: none;
-    color: white;
-    font-size: 1.5em;
-    padding: 1.3em;
-    text-decoration: none;
 }
