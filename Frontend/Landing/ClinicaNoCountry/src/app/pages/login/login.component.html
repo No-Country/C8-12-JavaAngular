@@ -1,4 +1,10 @@
-<app-header></app-header>
+<mat-toolbar class="toolbar">
+    <div class="logo">
+        <a routerLink="/" routerLinkActive="router-link-active"  data-ancla="home">
+        <img src="../../../assets/img/logo-nav.svg" alt="logo"></a>
+    </div>
+
+</mat-toolbar>
 
 <link type="text/css" rel="stylesheet"
         href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
@@ -32,8 +38,14 @@
              
 </div>
    <button type="submit" (click)="login()">Ingresar</button>
-    </form>
+   <div class="registrar">
+    <a href="register">¿No tienes cuenta?</a>
 </div>
+    </form>
+    
+</div>
+
+
 
 
 

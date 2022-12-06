@@ -18,6 +18,8 @@ import { Pag404Component } from './pages/pag404/pag404.component';
 import { GenerateTurnComponent } from './pages/patient/generate-turn/generate-turn.component';
 import { HomeAdminComponent } from './pages/home-admin/home-admin.component';
 import { HomeMedicComponent } from './pages/home-medic/home-medic.component';
+import { ApptPatientComponent } from './pages/patient/appt-patient/appt-patient.component';
+import { MatTableModule } from '@angular/material/table';
 
 @NgModule({
   declarations: [
@@ -31,9 +33,11 @@ import { HomeMedicComponent } from './pages/home-medic/home-medic.component';
     SidenavComponent,
     Pag404Component,
     GenerateTurnComponent,
+
     HomeAdminComponent,
     HomeMedicComponent,
-  
+    ApptPatientComponent
+
   ],
   imports: [
     BrowserModule,

@@ -1,5 +1,5 @@
-<app-header [inputSideNav]="sidenav"></app-header>
-<mat-sidenav-container >
+<app-header [inputSideNav]="sidenav" ></app-header>
+<mat-sidenav-container>
   <mat-sidenav #sidenav mode="side" opened="">
     <app-sidenav></app-sidenav>
   </mat-sidenav>
@@ -11,24 +11,24 @@
           <div class="col-6 col-sm-4">
             <div class="card">
               <div class="card-body">
-                <h5 class="card-title fs-4">Mi Plan</h5>
-                <p class="card-text fs-3">MEDICUS 310</p>
+                <h5 class="card-title fs-5">Mi Plan</h5>
+                <p class="card-text fs-5">MEDICUS 310</p>
               </div>
             </div>
           </div>
           <div class="col-6 col-sm-4">
             <div class="card">
               <div class="card-body">
-                <h5 class="card-title fs-4">N° Afiliado</h5>
-                <p class="card-text fs-3">07615832 03</p>
+                <h5 class="card-title fs-5">N° Afiliado</h5>
+                <p class="card-text fs-5">07615832 03</p>
               </div>
             </div>
           </div>
           <div class="col-6 col-sm-4">
             <div class="card">
               <div class="card-body">
-                <h5 class="card-title fs-4">Nº de Identidad</h5>
-                <p class="card-text fs-3">36.561.783</p>
+                <h5 class="card-title fs-5">Nº de Identidad</h5>
+                <p class="card-text fs-5">36.561.783</p>
               </div>
             </div>
           </div>
@@ -39,7 +39,7 @@
               <img class='img-doctor' src='../../../../assets/img/doctor.png'/>
               <div class="card card-style" style="max-width: 18rem">
                 <div class="card-body">
-                  <p class="card-text text-center fs-4">
+                  <p class="card-text text-center fs-5">
                     Con <strong>Clínica No Country</strong> ahora puedes obtener tu turno en sólo un par de clicks.
                   </p>
                 </div>
@@ -50,8 +50,8 @@
 
         </div>
         <div class='row'>
-          <div class="col-12">
-            <button type="button" class='btn-primary'>Generar nuevo turno</button>
+          <div class="col-12 mb-5">
+            <a routerLink="/generate-turn" class='btn-primary'>Generar nuevo turno</a>
           </div>
         </div>
       </div>

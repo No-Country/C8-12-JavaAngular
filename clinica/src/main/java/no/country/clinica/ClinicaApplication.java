@@ -3,17 +3,17 @@ package no.country.clinica;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
-
-import no.country.clinica.dao.DoctorDao;
-import no.country.clinica.domain.model.Doctor;
+import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 @SpringBootApplication
 public class ClinicaApplication {
 
     public static void main(String[] args) {
         ApplicationContext context = SpringApplication.run(ClinicaApplication.class, args);
+
+         /*
         DoctorDao repository = context.getBean(DoctorDao.class);
-        
+
         Doctor doctor1 = new Doctor("Hester", "Leverentz", 1);
         Doctor doctor2 = new Doctor("Nanete", "Greber", 2);
         Doctor doctor3 = new Doctor("Vania", "Arnull", 3);
@@ -24,7 +24,7 @@ public class ClinicaApplication {
         Doctor doctor8 = new Doctor("Sean", "Handy", 3);
         Doctor doctor9 = new Doctor("Harp", "Pentin", 2);
         Doctor doctor10 = new Doctor("Parsifal", "Lagneaux", 1);
-        
+
         repository.save(doctor1);
 	repository.save(doctor2);
         repository.save(doctor3);
@@ -35,6 +35,7 @@ public class ClinicaApplication {
 	repository.save(doctor8);
         repository.save(doctor9);
 	repository.save(doctor10);
+         */
     }
 
 }

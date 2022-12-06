@@ -1,0 +1,44 @@
+.appt-patient {
+    width: 100%;
+    height: 100%;
+    padding: 2em;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+.title {
+    font-family: 'Mulish', sans-serif;
+}
+
+.plan {
+    background-color: rgba(24, 59, 181, 0.55);
+    padding: 1rem;
+    border-radius: 12px;
+    margin: 0 4rem 0 4rem;
+}
+
+.contain-menu {
+    width: 100%;
+    height: 55vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+table{
+    width: 100%;
+    background-color: #D2D7E9;
+
+}
+
+.btn-primary {
+    width: 20em;
+    background: #183BB5;
+    border-radius: 0.5em;
+    border: none;
+    color: white;
+    font-size: 1.5em;
+    padding: 1.3em;
+    text-decoration: none;
+}

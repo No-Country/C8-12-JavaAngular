@@ -1,48 +1,64 @@
-<div class='container-inputs'>
-  <span>
-    <h2>
-      Especialidad
-    </h2>
-    <select class='form-select' aria-label="Default select example">
-      <option selected>Seleccionar una especialidad</option>
-      <option value="1">Oftalmología</option>
-      <option value="2">Cardiología</option>
-      <option value="3">Dermatología</option>
-    </select>
-  </span>
-  <span>
-    <h2>
-      Profesional
-    </h2>
-    <select class='form-select' aria-label="Default select example">
-      <option selected>Seleccionar un Profesional</option>
-      <option value="1">Oftalmología</option>
-      <option value="2">Cardiología</option>
-      <option value="3">Dermatología</option>
-    </select>
-  </span>
-</div>
-<div class='container-inputs'>
-  <span>
-    <h2>
-      Especialidad
-    </h2>
-    <select class='form-select' aria-label="Default select example">
-      <option selected>Seleccionar una especialidad</option>
-      <option value="1">Oftalmología</option>
-      <option value="2">Cardiología</option>
-      <option value="3">Dermatología</option>
-    </select>
-  </span>
-  <span>
-    <h2>
-      Seleccionar hora
-    </h2>
-    <select class='form-select' aria-label="Default select example">
-      <option selected>Seleccionar una hora</option>
-      <option value="1">Oftalmología</option>
-      <option value="2">Cardiología</option>
-      <option value="3">Dermatología</option>
-    </select>
-  </span>
-</div>
+<app-header [inputSideNav]="sidenav"></app-header>
+<mat-sidenav-container >
+  <mat-sidenav #sidenav mode="side" opened="false">
+    <app-sidenav></app-sidenav>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <section class="generate-turn">
+      <span><h1 class='title pb-5 px-5'><img src="../../../assets/img/vector.svg" alt="vector" class="px-3"><strong>Buscar Turno</strong></h1></span>
+        <div class='container-inputs'>
+          <span>
+            <h2>
+              Especialidad
+            </h2>
+            <select class='form-select' aria-label="Default select example">
+              <option selected>Seleccionar una especialidad</option>
+              <option value="1">Oftalmología</option>
+              <option value="2">Cardiología</option>
+              <option value="3">Dermatología</option>
+            </select>
+          </span>
+          <span>
+            <h2>
+              Profesional
+            </h2>
+            <select class='form-select' aria-label="Default select example">
+              <option selected>Seleccionar Profesional</option>
+              <option value="1">Dra. Gonzalez Claudia</option>
+              <option value="2">Dr. Perez Esteban</option>
+              <option value="3">Dra. Fernandez Liliana</option>
+            </select>
+          </span>
+        </div>
+
+      <div class='container-inputs'>
+        <span>
+          <h2>
+            Seleccionar fecha
+          </h2>
+            <div class="list__img">
+              <img src="../../../assets/img/calendar.svg" alt="calendar" width="300px">
+          </div>
+        </span>
+        <span>
+          <h2>
+            Horarios disponibles
+          </h2>
+          <select class='form-select' aria-label="Default select example">
+            <option selected>Seleccionar horario</option>
+            <option value="1">9.00 a.m.</option>
+            <option value="2">10.00 a.m.</option>
+            <option value="3">11.00 a.m.</option>
+          </select>
+        </span>
+
+
+      </div>
+      <span class="btn">
+        <a routerLink="/generate-turn"  class='btn-primary'>Agendar un nuevo turno</a>
+      </span>
+
+    </section>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+<app-footer></app-footer>
