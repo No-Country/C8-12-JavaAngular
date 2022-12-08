@@ -14,8 +14,6 @@ Clinica No country es un proyecto que nace de un equipo de No Country y permitir
 <p>Verónica Capobianco (https://github.com/veritocapito)</p>
 <p>Lucio Burella (https://github.com/LucioBurella)</p>
 
-· Backend: 
-<p>Diego Alejandro Sejas (https://github.com/diego-sejas)</p>
 
 · Testing QA: Excel
 <p>Andrea Ceballos (https://github.com/andreAlcaraz)</p>
