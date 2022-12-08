@@ -9,6 +9,7 @@ import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { AppRoutingModule } from './app-routing.module';
 import { Prueba404Component } from './pages/prueba404/prueba404.component';
+import { HomeMedicComponent } from './pages/home-medic/home-medic.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { Prueba404Component } from './pages/prueba404/prueba404.component';
     HomeComponent,
     LoginComponent,
     RegisterComponent,
-    Prueba404Component
+    Prueba404Component,
+    HomeMedicComponent
   ],
   imports: [
     BrowserModule,

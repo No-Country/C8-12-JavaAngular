@@ -1,0 +1,13 @@
+{
+  "users":
+      {
+          "id": "1",
+          "nombre": "Lucio",
+          "apellido":"Burella",
+          "documento":"41603130",
+          "email":"lucioburella@live.com",
+          "contraseña":"12345",
+          "repetirContraseña":"12345"
+      }
+
+}
